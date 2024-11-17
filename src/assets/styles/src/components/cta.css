@@ -1,0 +1,15 @@
+.cta {
+  @apply bg-black py-20 text-white lg:py-36;
+}
+
+.cta h2 {
+  @apply mb-6 text-5xl font-normal lg:mb-10 lg:text-6xl;
+}
+
+.cta p {
+  @apply mb-6 text-balance text-lg lg:mb-10 lg:text-2xl lg:leading-relaxed;
+}
+
+.cta a {
+  @apply inline-block rounded-xl bg-white px-12 py-4 font-syne font-semibold text-black transition-colors hover:bg-opacity-80;
+}

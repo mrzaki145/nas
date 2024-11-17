@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAS</title>
+
+    <link rel="stylesheet" href="./../assets/styles/styles.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/combine/npm/gsap@3.12.5,npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/preline@2.1.0/dist/preline.min.js"
+    ></script>
+    <script defer src="./../assets/scripts/main.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="navbar">
+        <div class="navbar__inner container">
+          <div class="flex items-center">
+            <button
+              class="navbar__menu-btn"
+              data-hs-overlay="#mobile-navbar"
+              aria-controls="mobile-navbar"
+            >
+              <span class="sr-only">Toggle Navigation</span>
+              <svg>
+                <use href="./../assets/images/sprite.svg#menu"></use>
+              </svg>
+            </button>
+
+            <img
+              src="./../assets/images/logo.png"
+              class="navbar__logo"
+              alt="nas logo"
+            />
+          </div>
+
+          <nav class="navbar__nav">
+            <ul>
+              <li class="dropdown">
+                <a href="./about.html" class="navbar__link">
+                  About NAS
+
+                  <!-- <svg>
+                    <use href="./../assets/images/sprite.svg#chevron-down"></use>
+                  </svg> -->
+                </a>
+
+                <!-- <div
+                  class="hs-dropdown-menu hidden z-30 hs-dropdown-open:block bg-white rounded-lg shadow-xl p-4 space-y-3 min-w-64 hs-dropdown-open:opacity-100 [--trigger:hover]"
+                >
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                </div> -->
+              </li>
+
+              <li class="overlay hs-overlay">
+                <button
+                  type="button"
+                  class="navbar__link"
+                  href="./about.html"
+                  data-hs-overlay="#services-menu"
+                  aria-controls="services-menu"
+                  aria-pressed="false"
+                  aria-current="page"
+                >
+                  Services
+
+                  <svg>
+                    <use
+                      href="./../assets/images/sprite.svg#chevron-down"
+                    ></use>
+                  </svg>
+                </button>
+
+                <div
+                  id="services-menu"
+                  class="sub-menu absolute inset-x-0 top-full z-30 hidden w-full translate-y-7 bg-black px-24 py-12 opacity-0 transition-all hs-overlay-open:translate-y-0 hs-overlay-open:opacity-100 hs-overlay-backdrop-open:bg-black/25"
+                >
+                  <div class="mx-auto max-w-[1400px]">
+                    <div class="grid grid-cols-3 divide-x divide-gray-900">
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-lavender">
+                          <use
+                            href="./../assets/images/sprite.svg#service-1"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-lavender"
+                        >
+                          Solutions Services
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-green">
+                          <use
+                            href="./../assets/images/sprite.svg#service-2"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-green"
+                        >
+                          Digital Services
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-pink">
+                          <use
+                            href="./../assets/images/sprite.svg#service-3"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-pink"
+                        >
+                          Training
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <hr class="my-16 border-gray-900" />
+
+                    <div class="grid grid-cols-3 divide-x divide-gray-900">
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-4 size-10 text-gray-600">
+                          <use
+                            href="./../assets/images/sprite.svg#service-3"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-8 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                        >
+                          Other solutions
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-span-2 px-24 first:ps-0 last:pe-0">
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                        >
+                          Latest Articles
+                        </p>
+
+                        <div class="max-w-[650px] space-y-6">
+                          <a
+                            href="#"
+                            class="group flex items-start gap-6 rounded-lg transition-[padding,background-color] hover:bg-gray-800 hover:p-4"
+                          >
+                            <img
+                              src="./../assets/images/preview-1.png"
+                              class="max-h-32 w-32 shrink-0 rounded-md object-cover object-center"
+                              alt=""
+                            />
+                            <div>
+                              <h4
+                                class="mb-5 font-syne text-lg font-medium group-hover:underline lg:text-2xl"
+                              >
+                                Travel Agency Website casestudy
+                              </h4>
+                              <p
+                                class="line-clamp-2 text-balance text-gray-400"
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Luctus cum purus bibendum risus
+                                nibh cursus integer.
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="./support.html" class="navbar__link">Get support</a>
+              </li>
+              <li>
+                <a href="./careers.html" class="navbar__link">Careers</a>
+              </li>
+              <li>
+                <a href="./blog.html" class="navbar__link">Blog spot</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="./contact.html" class="navbar__btn">Let’s talk!</a>
+        </div>
+      </div>
+
+      <div
+        data-lenis-prevent
+        id="mobile-navbar"
+        class="navbar__mobile hs-overlay hidden opacity-0 [--auto-close:lg] hs-overlay-open:block hs-overlay-open:opacity-100 hs-overlay-backdrop-open:bg-transparent"
+      >
+        <button
+          class="navbar__menu-btn mb-20"
+          data-hs-overlay="#mobile-navbar"
+          aria-controls="mobile-navbar"
+        >
+          <span class="sr-only">Toggle Navigation</span>
+          <svg>
+            <use href="./../assets/images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+
+        <div class="space-y-12">
+          <div class="hs-accordion-group">
+            <div class="hs-accordion">
+              <button class="hs-accordion-toggle link">
+                About NAS
+                <svg class="hs-accordion-active:rotate-180">
+                  <use href="./../assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              >
+                <div class="pt-12">
+                  <p>
+                    <em>This is the third item's accordion body.</em> It is
+                    hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hs-accordion">
+              <button class="hs-accordion-toggle link">
+                Services
+                <svg class="hs-accordion-active:rotate-180">
+                  <use href="./../assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div class="hs-accordion-content hidden">
+                <div class="divide-y divide-gray-800 pt-12">
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-lavender">
+                      <use href="./../assets/images/sprite.svg#service-1"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-lavender"
+                    >
+                      Solutions Services
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-pink">
+                      <use href="./../assets/images/sprite.svg#service-2"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-pink"
+                    >
+                      Training
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-gray-600">
+                      <use href="./../assets/images/sprite.svg#service-3"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                    >
+                      Other solutions
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="link">Get support</a>
+          <a href="#" class="link">Blog spot</a>
+        </div>
+      </div>
+
+      <header class="bg-white pb-20 pt-36 lg:pb-40 lg:pt-52">
+        <div class="container">
+          <ol class="breadcrumb">
+            <li>
+              <a href="./index.html"> Home </a>
+
+              <svg>
+                <use href="./../assets/images/sprite.svg#chevron-right"></use>
+              </svg>
+            </li>
+            <li aria-current="page">TaaS</li>
+          </ol>
+
+          <h1 class="text-4xl">TaaS</h1>
+        </div>
+      </header>
+
+      <main class="main overflow-visible">
+        <section
+          class="relative isolate bg-primary text-white max-lg:overflow-hidden"
+        >
+          <img
+            src="./../assets/images/services/shape-2.png"
+            class="absolute bottom-20 end-0 -z-10 max-lg:hidden"
+            alt=""
+          />
+
+          <div class="container">
+            <div class="grid lg:grid-cols-2 lg:items-end lg:gap-8">
+              <div class="self-center pt-24 lg:py-8">
+                <h2 class="text-5xl leading-tight lg:text-7xl lg:leading-snug">
+                  Comprehensive, Efficient, and
+                  <span class="text-lavender">Scalable</span>
+                </h2>
+              </div>
+
+              <div class="self-end pt-8">
+                <img
+                  src="./../assets/images/services/service-1.png"
+                  class="mx-auto w-full max-w-[580px] max-lg:translate-y-12"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="space-y-28 bg-white py-28 lg:space-y-40 lg:py-40">
+          <section>
+            <div class="container">
+              <p class="text-lg lg:text-2xl lg:leading-relaxed">
+                The future of software testing starts with NAS's Testing as a
+                Service (TaaS) solution. Experience comprehensive, efficient,
+                and scalable testing services that ensure the quality and
+                reliability of your software applications. Whether you're a
+                startup, a growing business, or an enterprise looking to
+                streamline your testing processes, NAS is here to elevate your
+                testing experience.
+              </p>
+            </div>
+          </section>
+
+          <section class="relative isolate">
+            <div class="container">
+              <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
+                <div class="flex-1 max-lg:order-2">
+                  <h2
+                    class="mb-7 text-balance text-4xl lg:mb-12 lg:text-5xl lg:leading-snug"
+                  >
+                    Streamlined Testing Solutions
+                  </h2>
+                  <p class="text-balance text-lg lg:text-xl lg:leading-relaxed">
+                    Say goodbye to the complexities and challenges of in-house
+                    testing and hello to streamlined testing solutions with
+                    NAS's TaaS. Our comprehensive testing services cover a wide
+                    range of testing types, including functional testing,
+                    performance testing, security testing, and more. From web
+                    applications to mobile apps and enterprise systems, we
+                    ensure that your software meets the highest quality
+                    standards before deployment.
+                  </p>
+                </div>
+
+                <img
+                  src="./../assets/images/services/Image.png"
+                  class="w-full max-w-[515px] rounded-br-9xl object-cover object-center max-lg:order-1"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <img
+              src="./../assets/images/contact/shape-1.png"
+              class="absolute end-0 top-20 -z-10 max-lg:hidden"
+              alt=""
+            />
+          </section>
+
+          <section class="relative isolate lg:pt-20">
+            <div
+              class="absolute inset-x-0 top-0 -z-10 h-[500px] bg-gray-50 max-lg:hidden"
+            ></div>
+
+            <div class="container">
+              <header class="mb-8 max-w-5xl lg:mb-14">
+                <h2
+                  class="mb-7 text-balance text-4xl lg:mb-12 lg:text-5xl lg:leading-snug"
+                >
+                  Fast. Reliable. Available 24/7
+                </h2>
+              </header>
+
+              <div id="service-features">
+                <article class="masonry bg-black p-6 text-white lg:p-8">
+                  <h3 class="mb-8 text-3xl lg:text-4xl">
+                    Scalable and Flexible Testing Models
+                  </h3>
+                  <p class="mb-12 lg:text-xl lg:leading-relaxed">
+                    At NAS, we understand that every business is unique, and so
+                    are its testing needs. That's why we offer scalable and
+                    flexible testing models that adapt to your project
+                    requirements and budget constraints. Whether you need
+                    on-demand testing support for a specific project or a
+                    long-term testing partnership, NAS's TaaS solutions scale
+                    effortlessly to meet your evolving needs.
+                  </p>
+                </article>
+                <article class="masonry bg-black p-6 text-white lg:p-8">
+                  <h3 class="mb-8 text-3xl lg:text-4xl">Expert Testing Team</h3>
+                  <p class="mb-12 lg:text-xl lg:leading-relaxed">
+                    Gain access to a team of expert testers with extensive
+                    experience across various industries and technologies. Our
+                    skilled professionals leverage industry best practices,
+                    advanced testing tools, and proven methodologies to deliver
+                    superior testing outcomes. From test planning and execution
+                    to defect management and reporting, our team ensures that
+                    your software performs flawlessly under real-world
+                    conditions.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="container">
+              <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
+                <img
+                  src="./../assets/images/services/Image.png"
+                  class="w-full max-w-[515px] rounded-br-9xl object-cover object-center"
+                  alt=""
+                />
+
+                <div class="flex-1">
+                  <h2
+                    class="mb-7 text-balance text-4xl lg:mb-12 lg:text-5xl lg:leading-snug"
+                  >
+                    Accelerate Time-to-Market
+                  </h2>
+                  <p class="text-balance text-lg lg:text-xl lg:leading-relaxed">
+                    In today's fast-paced digital landscape, time-to-market is
+                    critical for staying ahead of the competition. With NAS's
+                    TaaS solutions, you can accelerate your software development
+                    lifecycle by streamlining the testing process. Our efficient
+                    testing methodologies and automation capabilities help
+                    identify and address issues early in the development cycle,
+                    reducing rework and ensuring faster time-to-market for your
+                    applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="cta">
+          <div class="container">
+            <h2 class="flex flex-wrap items-baseline gap-4">
+              Partner with
+              <svg
+                class="inline-block size-10 lg:size-14"
+                viewBox="0 0 59 58"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.5 0L39.9258 19.1055L61 22.1614L45.7607 37.0141L49.3513 58L30.5 48.1054L11.6487 58L15.2607 37.0141L0 22.1614L21.0742 19.1055L30.5 0Z"
+                  fill="#FFA8C6"
+                />
+              </svg>
+              NAS for Your Testing Needs
+            </h2>
+
+            <p>
+              Ready to elevate your testing experience with NAS's TaaS
+              solutions? Partner with us today and experience the future of
+              software testing. Whether you're a startup, a growing business, or
+              an enterprise, NAS is your trusted partner for comprehensive,
+              efficient, and scalable testing services. Contact us to learn more
+              about how NAS's TaaS solutions can transform your testing
+              processes and drive success for your business.
+            </p>
+
+            <a href="#">READY TO TRANSFORM!</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <img
+            src="./../assets/images/logo.png"
+            class="footer__logo-mobile"
+            alt=""
+          />
+
+          <div class="footer__top">
+            <nav class="footer__nav">
+              <a href="./about.html">About NAS</a>
+              <a href="./services.html">Services</a>
+              <a href="./support.html">Get support</a>
+              <a href="./blog.html">Blog</a>
+            </nav>
+
+            <address>
+              <a href="mailto:hello@Nasolutions.com">Hello@Nasolutions.com</a>
+              <a href="mailto:hello@Nasolutions.uk">Hello@Nasolutions.uk</a>
+            </address>
+          </div>
+
+          <div class="footer__middle">
+            <div class="footer__loaction">
+              <h3>Location</h3>
+
+              <div class="flex gap-8">
+                <div class="flex-1">
+                  <h4>Egypt</h4>
+                  <p>
+                    Flat 620 - Bulding 23 Street 9 - New Maadi street, Cairo
+                  </p>
+                </div>
+                <div class="flex-1">
+                  <h4>United Emirates</h4>
+                  <p>
+                    233 We work space, The office 4, World trade center, Dubai,
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <nav class="footer__policy">
+              <a href="#">Privecy policy</a>
+              <a href="#">License</a>
+            </nav>
+          </div>
+
+          <div class="footer__bottom">
+            <img
+              src="./../assets/images/logo.png"
+              class="footer__logo-desktop"
+              alt=""
+            />
+
+            <ul class="footer__social">
+              <li>
+                <a href="#">
+                  <img src="./../assets/images/icons/facebook.svg" alt="" />
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./../assets/images/icons/twitter.svg" alt="" />
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./../assets/images/icons/youtube.svg" alt="" />
+                  Youtube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="copyright">©2023 sln All Rights are reserved️</p>
+      </footer>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.js"></script>
+    <script>
+      var macyInstance = Macy({
+        container: "#service-features",
+        mobileFirst: true,
+        margin: {
+          x: 32,
+          y: 32,
+        },
+        breakAt: {
+          0: {
+            columns: 1,
+            margin: 24,
+          },
+          1024: {
+            columns: 2,
+            margin: 32,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

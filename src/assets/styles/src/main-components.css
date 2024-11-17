@@ -1,0 +1,16 @@
+@import "tailwindcss/components";
+
+@import 'components/breadcrumb.css';
+
+@import "./components/navbar.css";
+@import "./components/single-hero.css";
+@import "./components/cta.css";
+@import "./components/footer.css";
+
+@import "./components/statistics.css";
+@import './components/services.css';
+@import './components/service-step.css';
+@import "./components/features.css";
+@import "./components/blog-article.css";
+@import "./components/team-member.css";
+@import "./components/job-card.css";

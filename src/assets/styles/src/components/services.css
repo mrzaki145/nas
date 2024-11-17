@@ -1,0 +1,54 @@
+.service {
+  @apply relative isolate grid lg:pb-[50vh] max-lg:min-h-screen max-lg:gap-10 max-lg:pt-20 lg:grid-cols-2;
+  /* lg:min-h-screen */
+}
+
+.service.black {
+  @apply max-lg:bg-black max-lg:-mx-6 max-lg:px-6;
+}
+
+.service .line {
+  @apply isolate inline-block max-lg:hidden -z-10 absolute left-6 top-16 bottom-6 w-0.5 bg-white/30
+}
+.service .inner-line {
+  @apply w-full bg-white  inline-block
+}
+.service:last-of-type .line {
+  @apply hidden
+}
+
+.service__content {
+  @apply flex items-start gap-6;
+}
+
+.service__icon {
+  @apply size-14 shrink-0 lg:size-12;
+}
+
+.service__content > div {
+  @apply space-y-10;
+}
+
+.service h3 {
+  @apply text-4xl font-medium lg:text-5xl;
+}
+
+.service p {
+  @apply text-balance lg:text-xl lg:leading-relaxed;
+}
+
+.service__link {
+  @apply inline-flex items-center gap-3 hover:rounded-[50px] hover:bg-white hover:text-[#000] rounded-lg bg-[#000] ps-6 hover:pe-4 py-3 font-sharp-grotesk font-normal text-white lg:py-4;
+  transition: 0.3s ease-out;
+  transition-property: color, background-color, border-radius ,padding;
+}
+.service__link svg {
+  @apply size-6 text-transparent transition-colors
+}
+.service__link:hover svg {
+  @apply text-black
+}
+
+.service__img {
+  @apply self-center hidden;
+}

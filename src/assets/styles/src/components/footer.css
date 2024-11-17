@@ -1,0 +1,87 @@
+.footer {
+  @apply  bg-primary py-12 text-white lg:pt-32;
+}
+
+.footer__logo-mobile {
+  width: 153px;
+  @apply mb-10 lg:hidden;
+}
+.footer__logo-desktop {
+  width: 176px;
+  @apply max-lg:hidden;
+}
+
+/* --- */
+
+.footer__top {
+  @apply mb-12 flex flex-col justify-between gap-10 border-b border-white/25 pb-12 lg:mb-16 lg:flex-row lg:items-start lg:pb-16;
+}
+
+/* --- */
+
+.footer__nav {
+  @apply flex flex-col gap-6 text-start lg:flex-row lg:gap-11;
+}
+.footer__nav a {
+  @apply text-xl text-white transition-colors hover:text-opacity-65;
+}
+
+/* --- */
+
+.footer address {
+  @apply space-y-6 text-end lg:space-y-8;
+}
+.footer address a {
+  @apply block text-3xl not-italic text-white transition-colors hover:text-opacity-65 lg:text-4xl;
+}
+
+/* --- */
+
+.footer__middle {
+  @apply mb-8 flex flex-col lg:mb-20 lg:flex-row lg:items-end lg:justify-between;
+}
+
+.footer__loaction {
+  @apply w-full max-lg:mb-12 max-lg:border-b max-lg:border-b-white/25 max-lg:pb-12 lg:w-3/4;
+}
+
+.footer__loaction h3 {
+  @apply mb-5 font-semibold text-gray-300;
+}
+
+.footer__loaction h4 {
+  @apply mb-3 text-lg font-semibold lg:text-xl;
+}
+
+.footer__loaction p {
+  @apply text-white text-opacity-50 lg:text-[22px];
+}
+
+/* --- */
+
+.footer__policy {
+  @apply flex flex-row gap-10 lg:flex-col lg:justify-end lg:gap-6 lg:text-end;
+}
+.footer__policy a {
+  @apply text-white transition-colors lg:text-opacity-50 lg:hover:text-opacity-100;
+}
+
+/* --- */
+
+.footer__bottom {
+  @apply flex items-center justify-between;
+}
+
+.footer__social {
+  @apply flex items-center gap-8 lg:gap-10;
+}
+
+.footer__social a {
+  @apply inline-flex items-center gap-4 transition-opacity hover:opacity-50;
+}
+
+/* --- */
+
+.copyright {
+  @apply mt-10 text-center text-white/60 lg:mt-20;
+}

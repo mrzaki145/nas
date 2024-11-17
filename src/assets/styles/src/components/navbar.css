@@ -1,0 +1,83 @@
+.navbar {
+  @apply absolute inset-x-0 top-0 z-50  bg-primary py-4 text-white lg:py-6;
+  /* relative z-50 */
+}
+
+.navbar__inner {
+  @apply flex items-center justify-between gap-10;
+}
+
+/* ------- */
+
+.navbar__menu-btn {
+  @apply me-5 inline-flex items-center justify-center border-none outline-none lg:hidden;
+}
+.navbar__menu-btn svg {
+  @apply size-8 text-white;
+}
+
+/* ------- */
+
+.navbar__logo {
+  @apply w-[104px] lg:w-[120px];
+}
+
+/* ------- */
+
+.navbar__nav {
+  @apply flex-1 max-lg:hidden;
+}
+.navbar__nav > ul {
+  @apply flex items-center justify-end gap-6;
+}
+
+/* ------- */
+
+.navbar__link,
+.navbar__btn {
+  @apply inline-flex aria-current:font-semibold items-center gap-3 rounded-lg px-6 py-3 font-syne text-white transition-all;
+}
+
+.navbar__link {
+  @apply relative rounded-b-none aria-current:text-green px-4 aria-pressed:translate-y-6 aria-pressed:bg-black;
+}
+.navbar__link[aria-current='page']::after {
+  content: '';
+  @apply absolute -bottom-6 w-full inset-x-0 bg-green h-1
+}
+
+.navbar__link svg {
+  @apply size-3.5 text-white text-opacity-60 transition-transform;
+}
+.navbar__link[aria-pressed="true"] svg {
+  @apply rotate-180 text-opacity-100;
+}
+
+.navbar__btn {
+  @apply bg-black px-6 hover:bg-white hover:text-black;
+}
+
+/* ------------------- */
+
+.navbar__mobile {
+  @apply fixed inset-0 z-50 overflow-auto bg-black px-4 pb-20 pt-6 text-white transition-opacity duration-500;
+}
+
+.navbar__mobile .link {
+  @apply block w-full font-sharp-grotesk text-4xl font-medium capitalize;
+}
+
+.navbar__mobile .hs-accordion-group {
+  @apply space-y-12 px-2;
+}
+
+.navbar__mobile .hs-accordion-toggle {
+  @apply flex w-full items-center justify-between text-start  disabled:pointer-events-none disabled:opacity-50;
+}
+.navbar__mobile .hs-accordion-toggle svg {
+  @apply size-5 text-gray-400 transition-transform;
+}
+
+.navbar__mobile .hs-accordion-content {
+  @apply w-full overflow-hidden transition-[height] duration-300;
+}

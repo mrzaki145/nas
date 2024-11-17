@@ -1,0 +1,19 @@
+.service-steps {
+  @apply flex flex-col flex-wrap justify-center gap-8 lg:flex-row lg:gap-x-0 lg:gap-y-12;
+}
+
+.service-steps .step {
+  @apply flex w-full flex-row items-start gap-6 lg:w-1/4 lg:flex-col lg:gap-0;
+}
+
+.service-steps img {
+  @apply w-[134px] lg:mb-6 lg:w-[164px];
+}
+
+.service-steps h3 {
+  @apply mb-4 text-4xl font-medium text-primary-600;
+}
+
+.service-steps p {
+  @apply max-w-[25ch] text-xl;
+}

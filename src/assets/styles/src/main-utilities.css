@@ -1,0 +1,26 @@
+@import "tailwindcss/utilities";
+
+/* -- */
+
+.section-title {
+  @apply font-sharp-grotesk font-medium leading-tight;
+  font-size: clamp(4rem, 2.9877rem + 4.3192vw, 6.875rem);
+}
+.section-title.font-normal {
+  font-weight: 400;
+}
+
+/* form */
+
+.label {
+  @apply mb-2 inline-block text-black text-sm font-medium;
+}
+.input {
+  @apply bg-white rounded-xl text-black p-4 block w-full placeholder:text-gray-500 focus:ring-primary ring ring-transparent transition-shadow border-none outline-none;
+}
+select {
+  @apply appearance-none;
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.99785 11.2001C7.83578 11.2001 7.67371 11.1404 7.54576 11.0124L2.42772 5.8944C2.18034 5.64703 2.18034 5.23759 2.42772 4.99022C2.67509 4.74284 3.08453 4.74284 3.3319 4.99022L7.99785 9.65616L12.6638 4.99022C12.9112 4.74284 13.3206 4.74284 13.568 4.99022C13.8154 5.23759 13.8154 5.64703 13.568 5.8944L8.44994 11.0124C8.32199 11.1404 8.15992 11.2001 7.99785 11.2001Z" fill="%23666666"/></svg>');
+  background-position: center right 1.5rem;
+  background-repeat: no-repeat;
+}

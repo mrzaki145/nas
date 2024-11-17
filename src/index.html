@@ -1,0 +1,1385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAS</title>
+
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/combine/npm/gsap@3.12.5,npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/preline@2.1.0/dist/preline.min.js"
+    ></script>
+    <script defer src="./assets/scripts/main.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="navbar">
+        <div class="navbar__inner container">
+          <div class="flex items-center">
+            <button
+              class="navbar__menu-btn"
+              data-hs-overlay="#mobile-navbar"
+              aria-controls="mobile-navbar"
+            >
+              <span class="sr-only">Toggle Navigation</span>
+              <svg>
+                <use href="./assets/images/sprite.svg#menu"></use>
+              </svg>
+            </button>
+
+            <img
+              src="./assets/images/logo.png"
+              class="navbar__logo"
+              alt="nas logo"
+            />
+          </div>
+
+          <nav class="navbar__nav">
+            <ul>
+              <li class="dropdown">
+                <a href="./about.html" class="navbar__link">
+                  About NAS
+
+                  <!-- <svg>
+                    <use href="./assets/images/sprite.svg#chevron-down"></use>
+                  </svg> -->
+                </a>
+
+                <!-- <div
+                  class="hs-dropdown-menu hidden z-30 hs-dropdown-open:block bg-white rounded-lg shadow-xl p-4 space-y-3 min-w-64 hs-dropdown-open:opacity-100 [--trigger:hover]"
+                >
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                </div> -->
+              </li>
+
+              <li class="overlay hs-overlay">
+                <button
+                  type="button"
+                  class="navbar__link"
+                  href="./about.html"
+                  data-hs-overlay="#services-menu"
+                  aria-controls="services-menu"
+                  aria-pressed="false"
+                >
+                  Services
+
+                  <svg>
+                    <use href="./assets/images/sprite.svg#chevron-down"></use>
+                  </svg>
+                </button>
+
+                <div
+                  id="services-menu"
+                  class="sub-menu absolute inset-x-0 top-full z-30 hidden w-full translate-y-7 bg-black px-24 py-12 opacity-0 transition-all hs-overlay-open:translate-y-0 hs-overlay-open:opacity-100 hs-overlay-backdrop-open:bg-black/25"
+                >
+                  <div class="mx-auto max-w-[1400px]">
+                    <div class="grid grid-cols-3 divide-x divide-gray-900">
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-lavender">
+                          <use
+                            href="./assets/images/sprite.svg#service-1"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-lavender"
+                        >
+                          Solutions Services
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-green">
+                          <use
+                            href="./assets/images/sprite.svg#service-2"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-green"
+                        >
+                          Digital Services
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-pink">
+                          <use
+                            href="./assets/images/sprite.svg#service-3"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-pink"
+                        >
+                          Training
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <hr class="my-16 border-gray-900" />
+
+                    <div class="grid grid-cols-3 divide-x divide-gray-900">
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-4 size-10 text-gray-600">
+                          <use
+                            href="./assets/images/sprite.svg#service-3"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-8 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                        >
+                          Other solutions
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-span-2 px-24 first:ps-0 last:pe-0">
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                        >
+                          Latest Articles
+                        </p>
+
+                        <div class="max-w-[650px] space-y-6">
+                          <a
+                            href="#"
+                            class="group flex items-start gap-6 rounded-lg transition-[padding,background-color] hover:bg-gray-800 hover:p-4"
+                          >
+                            <img
+                              src="./assets/images/preview-1.png"
+                              class="max-h-32 w-32 shrink-0 rounded-md object-cover object-center"
+                              alt=""
+                            />
+                            <div>
+                              <h4
+                                class="mb-5 font-syne text-lg font-medium group-hover:underline lg:text-2xl"
+                              >
+                                Travel Agency Website casestudy
+                              </h4>
+                              <p
+                                class="line-clamp-2 text-balance text-gray-400"
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Luctus cum purus bibendum risus
+                                nibh cursus integer.
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="./support.html" class="navbar__link">Get support</a>
+              </li>
+              <li>
+                <a href="./careers.html" class="navbar__link">Careers</a>
+              </li>
+              <li>
+                <a href="./blog.html" class="navbar__link">Blog spot</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="./contact.html" class="navbar__btn">Let’s talk!</a>
+        </div>
+      </div>
+
+      <div
+        data-lenis-prevent
+        id="mobile-navbar"
+        class="navbar__mobile hs-overlay hidden opacity-0 [--auto-close:lg] hs-overlay-open:block hs-overlay-open:opacity-100 hs-overlay-backdrop-open:bg-transparent"
+      >
+        <button
+          class="navbar__menu-btn mb-20"
+          data-hs-overlay="#mobile-navbar"
+          aria-controls="mobile-navbar"
+        >
+          <span class="sr-only">Toggle Navigation</span>
+          <svg>
+            <use href="./assets/images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+
+        <div class="space-y-12">
+          <div class="hs-accordion-group">
+            <div class="hs-accordion">
+              <button class="hs-accordion-toggle link">
+                About NAS
+                <svg class="hs-accordion-active:rotate-180">
+                  <use href="./assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              >
+                <div class="pt-12">
+                  <p>
+                    <em>This is the third item's accordion body.</em> It is
+                    hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hs-accordion">
+              <button class="hs-accordion-toggle link">
+                Services
+                <svg class="hs-accordion-active:rotate-180">
+                  <use href="./assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div class="hs-accordion-content hidden">
+                <div class="divide-y divide-gray-800 pt-12">
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-lavender">
+                      <use href="./assets/images/sprite.svg#service-1"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-lavender"
+                    >
+                      Solutions Services
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-pink">
+                      <use href="./assets/images/sprite.svg#service-2"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-pink"
+                    >
+                      Training
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-gray-600">
+                      <use href="./assets/images/sprite.svg#service-3"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                    >
+                      Other solutions
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="link">Get support</a>
+          <a href="#" class="link">Blog spot</a>
+        </div>
+      </div>
+
+      <header
+        id="hero"
+        class="relative z-20 flex min-h-dvh items-center overflow-hidden bg-primary pb-6 pt-10 text-white lg:pb-40 lg:pt-[20vh]"
+      >
+        <div class="container">
+          <h1 class="sr-only">The Architects Of Digital Evolution!</h1>
+
+          <div class="mx-auto max-w-[1360px]">
+            <div
+              class="mb-16 font-sharp-grotesk font-medium leading-tight"
+              style="font-size: clamp(3.4375rem, 1.5229rem + 8.169vw, 8.875rem)"
+              aria-hidden="true"
+            >
+              <div
+                class="relative flex w-fit flex-wrap items-baseline gap-4 lg:items-center lg:gap-6"
+              >
+                <span class="move-up-text">The</span>
+                <span class="move-up-image">
+                  <img
+                    src="./assets/images/hero-title-1.png"
+                    class="w-[80px] origin-top-left transition-transform duration-500 hover:scale-150 lg:w-[125px]"
+                    alt=""
+                  />
+                </span>
+                <span class="move-up-text">Architects</span>
+
+                <span class="absolute -top-4 start-[20%] lg:start-[40%]">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.4002 0.310477C14.0704 6.19993 20.4455 9.87339 27.391 10.101C21.49 13.764 17.8094 20.1266 17.5814 27.0586C13.9112 21.1691 7.53609 17.4957 0.590579 17.2681C6.49156 13.605 10.1722 7.24243 10.4002 0.310477Z"
+                      fill="#BE7CFF"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <div
+                class="relative flex w-fit flex-wrap items-baseline gap-4 lg:gap-6"
+              >
+                <span class="move-up-text">Of</span>
+                <span class="title-word inline-block text-lavender"
+                  >Digital</span
+                >
+                <span class="move-up-image">
+                  <img
+                    src="./assets/images/hero-title-2.png"
+                    class="w-[110px] origin-top-left transition-transform duration-500 hover:scale-150 lg:w-[230px]"
+                    alt=""
+                  />
+                </span>
+
+                <span class="absolute -start-6 -top-4 max-lg:hidden">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.4747 6.39875C17.1706 10.1536 15.024 15.8104 15.7538 21.4753C11.999 17.1712 6.34213 15.0247 0.677189 15.7544C4.98131 11.9996 7.12783 6.34276 6.39812 0.677823C10.1529 4.98194 15.8098 7.12847 21.4747 6.39875Z"
+                      fill="#BE7CFF"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="relative flex w-fit items-center gap-4">
+                <span class="move-up-image">
+                  <img
+                    src="./assets/images/hero-title-3.png"
+                    class="relative z-20 w-[106px] origin-top-left transition-transform duration-500 hover:scale-125 lg:w-[250px]"
+                    alt=""
+                  />
+                </span>
+                <span
+                  class="title-word relative z-10 inline-block text-lavender"
+                  >Evolution!</span
+                >
+
+                <span class="absolute end-10 top-full lg:end-0 lg:top-0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.1696 0.158751C10.7977 4.38253 12.5591 8.51427 15.864 11.1707C11.6402 10.7988 7.50845 12.5602 4.85206 15.8651C5.22389 11.6413 3.46252 7.50954 0.157655 4.85315C4.38143 5.22499 8.51317 3.46362 11.1696 0.158751Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col items-center justify-between gap-10 lg:flex-row"
+            >
+              <div class="w-full lg:w-1/2">
+                <p class="move-up-text mb-6 text-balance text-lg lg:text-xl">
+                  Unlock easy-to-use solutions and a wide spectrum of
+                  transformative, performance-boosting services, all guaranteed
+                  for reliability and compatibility
+                </p>
+
+                <a
+                  href="#"
+                  class="move-up-text group inline-flex items-center rounded-full bg-white p-3.5 ps-6 font-sharp-grotesk font-medium text-black transition-colors hover:bg-black hover:text-white"
+                >
+                  Get Started
+
+                  <span
+                    class="ms-6 inline-flex size-10 items-center justify-center rounded-full bg-lavender transition-[transform,margin] group-hover:ms-10 group-hover:-rotate-45"
+                    aria-hidden="true"
+                  >
+                    <svg class="size-5 text-white">
+                      <use href="./assets/images/sprite.svg#btn-arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+
+              <div
+                aria-hidden="true"
+                class="ms-auto flex size-32 -translate-x-1/4 items-center justify-center lg:size-40 lg:-translate-x-1/2"
+              >
+                <div
+                  id="circular-text"
+                  class="text-sm font-semibold uppercase lg:text-base"
+                >
+                  Thanks for scrolling! get in touch<span class="text-lavender"
+                    >&#9733;</span
+                  >
+                </div>
+
+                <svg class="absolute size-10 text-white">
+                  <use href="./assets/images/sprite.svg#arrow-down"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section
+          id="statistics"
+          class="relative isolate z-10 bg-gray-50 pb-20 pt-36 lg:pb-40 lg:pt-28"
+        >
+          <div class="container">
+            <div class="mx-auto max-w-[1000px]">
+              <h2
+                class="the-title mb-8 font-sharp-grotesk font-medium leading-tight text-lavender"
+                style="
+                  font-size: clamp(3.4375rem, 1.5229rem + 8.169vw, 8.875rem);
+                "
+              >
+                Digital <br />
+                &MediumSpace; Evolution!
+              </h2>
+              <p class="text text-balance text-lg lg:text-xl">
+                Unlock easy-to-use solutions and a wide spectrum of
+                transformative, performance-boosting services, all guaranteed
+                for reliability and compatibility
+              </p>
+            </div>
+
+            <div class="relative mx-auto max-w-[1000px]">
+              <svg
+                id="logo-shape"
+                fill="none"
+                viewBox="0 0 747 837"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute -z-10 h-[575px] w-[514px] max-lg:-top-8 max-lg:start-8 lg:-bottom-80 lg:-start-40 lg:h-[837px] lg:w-[747px]"
+              >
+                <path
+                  d="M208.497 836.29L695.306 836.29C723.345 836.29 746.192 813.557 746.192 785.4L746.191 463.212L373.151 463.212L373.151 51.3617C373.151 23.3203 350.422 0.471716 322.268 0.471718L50.8824 0.471743C22.8439 0.471745 -0.00269307 23.2049 -0.00269069 51.3617L-0.00264208 627.883C-0.00263238 742.934 93.3444 836.29 208.383 836.29L208.497 836.29Z"
+                  fill="#F4F4F4"
+                />
+                <path
+                  class="max-lg:hidden"
+                  d="M246.38 766.805L624.134 766.805C645.891 766.805 663.619 749.139 663.619 727.258L663.619 476.884L374.148 476.884L374.148 156.831C374.148 135.04 356.511 117.284 334.664 117.284L124.075 117.284C102.317 117.284 84.5889 134.95 84.5889 156.831L84.589 604.851C84.589 694.258 157.024 766.805 246.292 766.805L246.38 766.805Z"
+                  fill="#E4E4E4"
+                />
+              </svg>
+
+              <div class="statistics-list mt-16 lg:mt-40">
+                <div class="statistics">
+                  <div>
+                    <h3>24/7</h3>
+                    <p>
+                      Live support <br />
+                      service
+                    </p>
+                  </div>
+
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.6485 54.1799H65.3515C65.8687 54.1799 66.3647 53.9681 66.7304 53.591C67.0961 53.214 67.3016 52.7026 67.3016 52.1693C67.3016 51.6361 67.0961 51.1247 66.7304 50.7476C66.3647 50.3706 65.8687 50.1587 65.3515 50.1587H63.4014V46.1376C63.3943 40.089 61.1866 34.2633 57.2147 29.8118C53.2429 25.3603 47.7958 22.607 41.9501 22.096V17.9894H45.8503C46.3675 17.9894 46.8636 17.7776 47.2293 17.4005C47.595 17.0235 47.8005 16.5121 47.8005 15.9788C47.8005 15.4456 47.595 14.9342 47.2293 14.5571C46.8636 14.1801 46.3675 13.9683 45.8503 13.9683H34.1497C33.6325 13.9683 33.1364 14.1801 32.7707 14.5571C32.405 14.9342 32.1995 15.4456 32.1995 15.9788C32.1995 16.5121 32.405 17.0235 32.7707 17.4005C33.1364 17.7776 33.6325 17.9894 34.1497 17.9894H38.0499V22.096C32.2042 22.607 26.7571 25.3603 22.7853 29.8118C18.8134 34.2633 16.6057 40.089 16.5986 46.1376V50.1587H14.6485C14.1313 50.1587 13.6353 50.3706 13.2696 50.7476C12.9039 51.1247 12.6984 51.6361 12.6984 52.1693C12.6984 52.7026 12.9039 53.214 13.2696 53.591C13.6353 53.9681 14.1313 54.1799 14.6485 54.1799ZM20.4989 46.1376C20.4989 40.8052 22.5534 35.6912 26.2106 31.9206C29.8678 28.15 34.828 26.0318 40 26.0318C45.172 26.0318 50.1322 28.15 53.7894 31.9206C57.4466 35.6912 59.5011 40.8052 59.5011 46.1376V50.1587H20.4989V46.1376ZM67.3016 60.2116C67.3016 60.7449 67.0961 61.2563 66.7304 61.6333C66.3647 62.0104 65.8687 62.2222 65.3515 62.2222H14.6485C14.1313 62.2222 13.6353 62.0104 13.2696 61.6333C12.9039 61.2563 12.6984 60.7449 12.6984 60.2116C12.6984 59.6784 12.9039 59.167 13.2696 58.7899C13.6353 58.4129 14.1313 58.2011 14.6485 58.2011H65.3515C65.8687 58.2011 66.3647 58.4129 66.7304 58.7899C67.0961 59.167 67.3016 59.6784 67.3016 60.2116Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+
+                <div class="statistics">
+                  <div>
+                    <h3>+20</h3>
+                    <p>
+                      Years of <br />
+                      Excellence
+                    </p>
+                  </div>
+
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M63.3516 32.7934L43.6209 40.6704L57.539 58.5654C57.7254 58.7982 57.8636 59.0658 57.9456 59.3525C58.0277 59.6392 58.052 59.9393 58.017 60.2355C57.982 60.5317 57.8886 60.8179 57.742 61.0777C57.5955 61.3374 57.3987 61.5654 57.1633 61.7484C56.9279 61.9315 56.6584 62.0659 56.3705 62.1439C56.0827 62.2219 55.7822 62.242 55.4865 62.2029C55.1909 62.1637 54.9059 62.0662 54.6483 61.9161C54.3906 61.7659 54.1654 61.566 53.9856 61.328L40 43.3627L26.0228 61.3421C25.6532 61.8038 25.1168 62.1015 24.5294 62.1708C23.942 62.2402 23.351 62.0755 22.884 61.7125C22.4171 61.3495 22.1118 60.8173 22.0343 60.231C21.9567 59.6447 22.113 59.0514 22.4694 58.5795L36.3875 40.6845L16.6484 32.7934C16.094 32.5696 15.6512 32.1347 15.4175 31.5844C15.1838 31.0341 15.1782 30.4136 15.4021 29.8592C15.6259 29.3048 16.0608 28.8621 16.6111 28.6284C17.1615 28.3947 17.7821 28.3891 18.3365 28.6129L37.7492 36.3803V14.9491C37.7492 14.3522 37.9864 13.7797 38.4085 13.3577C38.8306 12.9356 39.4031 12.6985 40 12.6985C40.5969 12.6985 41.1694 12.9356 41.5915 13.3577C42.0136 13.7797 42.2508 14.3522 42.2508 14.9491V36.3803L61.6635 28.6129C61.938 28.5021 62.2317 28.4464 62.5277 28.4491C62.8238 28.4517 63.1164 28.5126 63.3889 28.6284C63.6613 28.7441 63.9084 28.9124 64.1158 29.1235C64.3233 29.3347 64.4871 29.5847 64.5979 29.8592C64.7088 30.1337 64.7645 30.4273 64.7618 30.7233C64.7592 31.0194 64.6982 31.3119 64.5825 31.5844C64.4668 31.8569 64.2985 32.1039 64.0873 32.3113C63.8761 32.5188 63.6261 32.6826 63.3516 32.7934Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+
+                <div class="statistics">
+                  <div>
+                    <h3>+14</h3>
+                    <p>Serving local & international regions</p>
+                  </div>
+
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M66.9771 20.0506C66.7879 19.7436 66.526 19.4907 66.2157 19.3153C65.9054 19.1399 65.5569 19.0478 65.2025 19.0476H14.8004C14.377 19.0472 13.9634 19.1779 13.6138 19.4226C13.2642 19.6672 12.995 20.0144 12.8414 20.4185C12.6879 20.8227 12.6571 21.2649 12.7533 21.6873C12.8494 22.1096 13.068 22.4923 13.3802 22.7852L24.4293 33.1565L13.2568 45.5525C12.9796 45.8597 12.7959 46.2431 12.7281 46.6557C12.6603 47.0682 12.7115 47.4921 12.8753 47.8753C13.0391 48.2586 13.3085 48.5846 13.6504 48.8134C13.9923 49.0423 14.392 49.164 14.8004 49.1637H49.8771L42.3063 65.448C42.1797 65.7039 42.1043 65.9832 42.0847 66.2694C42.0651 66.5556 42.1015 66.8429 42.1919 67.1144C42.2823 67.386 42.4248 67.6363 42.611 67.8506C42.7972 68.0649 43.0234 68.2389 43.2763 68.3623C43.5292 68.4857 43.8036 68.556 44.0834 68.5692C44.3632 68.5823 44.6427 68.538 44.9055 68.4388C45.1684 68.3396 45.4092 68.1876 45.6138 67.9917C45.8184 67.7958 45.9827 67.5599 46.097 67.2979L67.0978 22.1238C67.2502 21.7958 67.319 21.4338 67.2979 21.0713C67.2768 20.7087 67.1664 20.3576 66.9771 20.0506ZM51.8748 44.8614H19.586L28.934 34.4902C29.1218 34.2822 29.2676 34.0382 29.3631 33.7723C29.4585 33.5063 29.5018 33.2237 29.4903 32.9406C29.4788 32.6576 29.4129 32.3796 29.2962 32.1227C29.1796 31.8658 29.0146 31.635 28.8106 31.4436L20.2003 23.3499H61.8765L51.8748 44.8614Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+
+                <div class="statistics">
+                  <div>
+                    <h3>+20</h3>
+                    <p>
+                      Years of <br />
+                      Excellence
+                    </p>
+                  </div>
+
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M63.3516 32.7934L43.6209 40.6704L57.539 58.5654C57.7254 58.7982 57.8636 59.0658 57.9456 59.3525C58.0277 59.6392 58.052 59.9393 58.017 60.2355C57.982 60.5317 57.8886 60.8179 57.742 61.0777C57.5955 61.3374 57.3987 61.5654 57.1633 61.7484C56.9279 61.9315 56.6584 62.0659 56.3705 62.1439C56.0827 62.2219 55.7822 62.242 55.4865 62.2029C55.1909 62.1637 54.9059 62.0662 54.6483 61.9161C54.3906 61.7659 54.1654 61.566 53.9856 61.328L40 43.3627L26.0228 61.3421C25.6532 61.8038 25.1168 62.1015 24.5294 62.1708C23.942 62.2402 23.351 62.0755 22.884 61.7125C22.4171 61.3495 22.1118 60.8173 22.0343 60.231C21.9567 59.6447 22.113 59.0514 22.4694 58.5795L36.3875 40.6845L16.6484 32.7934C16.094 32.5696 15.6512 32.1347 15.4175 31.5844C15.1838 31.0341 15.1782 30.4136 15.4021 29.8592C15.6259 29.3048 16.0608 28.8621 16.6111 28.6284C17.1615 28.3947 17.7821 28.3891 18.3365 28.6129L37.7492 36.3803V14.9491C37.7492 14.3522 37.9864 13.7797 38.4085 13.3577C38.8306 12.9356 39.4031 12.6985 40 12.6985C40.5969 12.6985 41.1694 12.9356 41.5915 13.3577C42.0136 13.7797 42.2508 14.3522 42.2508 14.9491V36.3803L61.6635 28.6129C61.938 28.5021 62.2317 28.4464 62.5277 28.4491C62.8238 28.4517 63.1164 28.5126 63.3889 28.6284C63.6613 28.7441 63.9084 28.9124 64.1158 29.1235C64.3233 29.3347 64.4871 29.5847 64.5979 29.8592C64.7088 30.1337 64.7645 30.4273 64.7618 30.7233C64.7592 31.0194 64.6982 31.3119 64.5825 31.5844C64.4668 31.8569 64.2985 32.1039 64.0873 32.3113C63.8761 32.5188 63.6261 32.6826 63.3516 32.7934Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="services"
+          class="relative bg-primary pt-56 text-white lg:pt-96"
+        >
+          <div class="container">
+            <header class="mx-auto mb-36 max-w-3xl lg:mb-72">
+              <h2
+                style="
+                  font-size: clamp(3.4375rem, 1.5229rem + 8.169vw, 8.875rem);
+                "
+              >
+                Our <br /><span class="text-green">Services</span>
+              </h2>
+            </header>
+
+            <div class="services-list relative">
+              <div
+                class="canvas-wrapper relative z-30 flex justify-center lg:justify-end"
+              >
+                <canvas id="canvas" class="absolute bottom-full end-0"></canvas>
+              </div>
+
+              <div class="service">
+                <span class="line">
+                  <span class="inner-line"></span>
+                </span>
+
+                <div class="service__content">
+                  <div class="service__icon-wrapper">
+                    <svg class="service__icon text-green">
+                      <use href="./assets/images/sprite.svg#service-1"></use>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h3>
+                      <span
+                        >Solutions <br />
+                        Development</span
+                      >
+                    </h3>
+                    <p>
+                      Optimize your operations with our outsourcing services.
+                      Focus on core competencies while we handle non-core
+                      functions. Benefit from increased productivity, cost
+                      savings, and a competitive edge. Trust us to navigate
+                      complexities so you can propel your business forward.
+                      Embrace business efficiency with our cutting-edge
+                      solutions.
+                    </p>
+
+                    <a href="#" class="service__link">
+                      Get Started now
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <img
+                  class="service__img"
+                  src="./assets/images/service-1.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="service black">
+                <span class="line">
+                  <span class="inner-line"></span>
+                </span>
+
+                <div class="service__content">
+                  <div class="service__icon-wrapper">
+                    <svg class="service__icon text-green">
+                      <use href="./assets/images/sprite.svg#service-2"></use>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h3>
+                      <span>Outsourcing</span>
+                    </h3>
+                    <p>
+                      Optimize your operations with our outsourcing services.
+                      Focus on core competencies while we handle non-core
+                      functions. Benefit from increased productivity, cost
+                      savings, and a competitive edge. Trust us to navigate
+                      complexities so you can propel your business forward.
+                      Embrace business efficiency with our cutting-edge
+                      solutions.
+                    </p>
+
+                    <a href="#" class="service__link">
+                      Get Started now
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <img
+                  class="service__img"
+                  src="./assets/images/service-2.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="service">
+                <span class="line">
+                  <span class="inner-line"></span>
+                </span>
+
+                <div class="service__content">
+                  <div class="service__icon-wrapper">
+                    <svg class="service__icon text-green">
+                      <use href="./assets/images/sprite.svg#service-3"></use>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h3>
+                      <span
+                        >Infrastructure <br />
+                        Services</span
+                      >
+                    </h3>
+                    <p>
+                      Optimize your operations with our outsourcing services.
+                      Focus on core competencies while we handle non-core
+                      functions. Benefit from increased productivity, cost
+                      savings, and a competitive edge. Trust us to navigate
+                      complexities so you can propel your business forward.
+                      Embrace business efficiency with our cutting-edge
+                      solutions.
+                    </p>
+
+                    <a href="#" class="service__link">
+                      Get Started now
+                      <svg>
+                        <use
+                          href="./assets/images/sprite.svg#chevron-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <img
+                  class="service__img"
+                  src="./assets/images/service-3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="mb-24 space-y-40 lg:mb-40 lg:space-y-80">
+          <section
+            id="features"
+            class="relative bg-black py-44 text-white lg:py-72"
+          >
+            <img
+              src="./assets/images/service-after.png"
+              class="absolute -top-10 end-0 max-lg:hidden"
+              alt=""
+            />
+
+            <div class="container">
+              <header class="mb-20 lg:mb-32 lg:max-w-[1025px]">
+                <h2
+                  class="font-semibold leading-tight"
+                  style="
+                    font-size: clamp(4.1875rem, 3.2412rem + 4.0376vw, 6.875rem);
+                  "
+                >
+                  Ignite Your Success <span class="text-pink">With NAS!</span>
+                </h2>
+              </header>
+
+              <div class="features-list">
+                <div class="feature items-end">
+                  <div class="feature__content">
+                    <h4 class="feature__subtitle">
+                      Empowering Businesses in the Digital Era
+                    </h4>
+                    <h3 class="feature__title">
+                      NAS's Cutting-Edge Digital Solutions for Peak Performance
+                    </h3>
+
+                    <div class="feature__description">
+                      <p>
+                        NAS has been at the forefront of the digital landscape,
+                        providing cutting-edge digital services that empower
+                        businesses to thrive in the online realm. Our journey
+                        began with a vision to redefine digital solutions, and
+                        over the years, we have consistently evolved to meet the
+                        ever-changing demands of the digital era.
+                      </p>
+                      <p>
+                        Our robust infrastructure, established over years of
+                        dedicated service, ensures that your websites and
+                        applications perform at their peak. Whether you are a
+                        small business, a growing startup, or an established
+                        enterprise, our digital solutions are designed to scale
+                        with your needs.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="feature__img-wrapper">
+                    <img
+                      src="./assets/images/feature-img-1-shape.png"
+                      class="feature__shape absolute -start-6 -top-6 w-[150%] max-w-none lg:-start-8 lg:-top-20 lg:w-[130%]"
+                      alt=""
+                    />
+
+                    <img
+                      src="./assets/images/feature-img-1.png"
+                      class="feature__img"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="feature items-start">
+                  <div class="feature__img-wrapper">
+                    <img
+                      src="./assets/images/feature-img-1-shape.png"
+                      class="feature__shape LG:w-[125%] absolute -top-6 w-[150%] max-w-none max-lg:-start-6 lg:-top-10 lg:end-2/3"
+                      alt=""
+                    />
+
+                    <img
+                      src="./assets/images/feature-img-2.png"
+                      class="feature__img"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="feature__content">
+                    <h4 class="feature__subtitle">
+                      Empowering Businesses in the Digital Era
+                    </h4>
+                    <h3 class="feature__title">
+                      NAS's Cutting-Edge Digital Solutions for Peak Performance
+                    </h3>
+
+                    <div class="feature__description">
+                      <p>
+                        NAS has been at the forefront of the digital landscape,
+                        providing cutting-edge digital services that empower
+                        businesses to thrive in the online realm. Our journey
+                        began with a vision to redefine digital solutions, and
+                        over the years, we have consistently evolved to meet the
+                        ever-changing demands of the digital era.
+                      </p>
+                      <p>
+                        Our robust infrastructure, established over years of
+                        dedicated service, ensures that your websites and
+                        applications perform at their peak. Whether you are a
+                        small business, a growing startup, or an established
+                        enterprise, our digital solutions are designed to scale
+                        with your needs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="partner">
+            <div class="container">
+              <header class="mx-auto max-w-[1240px] space-y-9">
+                <h2
+                  class="font-normal leading-tight"
+                  style="
+                    font-size: clamp(2.5rem, 1.9278rem + 2.4413vw, 4.125rem);
+                  "
+                >
+                  Ready to
+                  <span class="inline-block flex-auto align-baseline">
+                    <svg
+                      class="inline-block size-8 lg:size-14"
+                      width="61"
+                      height="58"
+                      viewBox="0 0 61 58"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M30.5 0L39.9258 19.1055L61 22.1614L45.7607 37.0141L49.3513 58L30.5 48.1054L11.6487 58L15.2607 37.0141L0 22.1614L21.0742 19.1055L30.5 0Z"
+                        fill="#FFA8C6"
+                      />
+                    </svg>
+                  </span>
+                  Elevate Your Business to New Heights? Partner with NAS!
+                </h2>
+
+                <p class="text-balance text-black text-opacity-85 lg:text-2xl">
+                  We don't just offer services – we pave the way for your growth
+                  and sustainability. Your success is guaranteed with our
+                  reliable, available services backed by trusted partners and a
+                  highly skilled team. Begin your transformative journey today
+                  with NAS, and unlock a tailored experience that propels your
+                  business forward. Let's not just dream of success; let's make
+                  it happen.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block rounded-lg bg-black px-10 py-6 font-syne font-semibold text-white transition-colors hover:bg-primary"
+                  >Start Now</a
+                >
+              </header>
+
+              <ul
+                class="marquee mt-20 grid gap-4 max-lg:grid-cols-3 max-md:grid-cols-2 lg:mt-56 lg:grid-flow-col"
+                style="grid-auto-columns: 250px"
+              >
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jeep.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/notion.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jennar.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jeep.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/notion.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jennar.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jeep.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/notion.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jennar.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jeep.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/notion.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+                <li
+                  class="flex items-center justify-center rounded-3xl bg-white p-8 max-lg:aspect-square"
+                >
+                  <img
+                    src="./assets/images/icons/jennar.png"
+                    class="size-full object-contain object-center"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="blog">
+            <div class="container">
+              <header class="mb-8 lg:mb-14">
+                <h2 class="section-title">
+                  latest <br />
+                  <span class="text-primary">Articles</span>
+                </h2>
+              </header>
+
+              <div class="blogs">
+                <a href="#" class="group">
+                  <article class="article">
+                    <img
+                      src="./assets/images/preview-1.png"
+                      class="article__thumbnail"
+                      alt=""
+                    />
+
+                    <div class="article__content">
+                      <div>
+                        <h3>HRMS Admin Panel</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Luctus cum purus bibendum risus nibh cursus
+                          integer.
+                        </p>
+                      </div>
+
+                      <span href="#" class="article__arrow">
+                        <svg>
+                          <use
+                            href="./assets/images/sprite.svg#btn-arrow"
+                          ></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </article>
+                </a>
+                <a href="#" class="group">
+                  <article class="article">
+                    <img
+                      src="./assets/images/preview-2.png"
+                      class="article__thumbnail"
+                      alt=""
+                    />
+
+                    <div class="article__content">
+                      <div>
+                        <h3>HRMS Admin Panel</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Luctus cum purus bibendum risus nibh cursus
+                          integer.
+                        </p>
+                      </div>
+
+                      <span href="#" class="article__arrow">
+                        <svg>
+                          <use
+                            href="./assets/images/sprite.svg#btn-arrow"
+                          ></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </article>
+                </a>
+                <a href="#" class="group">
+                  <article class="article">
+                    <img
+                      src="./assets/images/preview-3.png"
+                      class="article__thumbnail"
+                      alt=""
+                    />
+
+                    <div class="article__content">
+                      <div>
+                        <h3>HRMS Admin Panel</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Luctus cum purus bibendum risus nibh cursus
+                          integer.
+                        </p>
+                      </div>
+
+                      <span href="#" class="article__arrow">
+                        <svg>
+                          <use
+                            href="./assets/images/sprite.svg#btn-arrow"
+                          ></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+
+              <p class="mt-8 text-center lg:hidden">
+                <a
+                  href="./blog.html"
+                  class="inline-block rounded-xl bg-black px-8 py-6 font-sharp-grotesk text-sm font-medium text-white transition-colors hover:bg-primary"
+                  >Read more articles</a
+                >
+              </p>
+
+              <div
+                class="more-articles relative mt-12 grid gap-6 max-lg:hidden lg:grid-cols-3 lg:gap-8"
+              >
+                <img
+                  src="./assets/images/preview-1.png"
+                  class="mb-6 max-h-[300px] w-full object-cover object-center opacity-25"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/preview-2.png"
+                  class="mb-6 max-h-[300px] w-full object-cover object-center opacity-25"
+                  alt=""
+                />
+                <img
+                  src="./assets/images/preview-3.png"
+                  class="mb-6 max-h-[300px] w-full object-cover object-center opacity-25"
+                  alt=""
+                />
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <a
+                    href="./blog.html"
+                    class="rounded-xl bg-primary px-8 py-6 font-syne font-semibold text-white transition-colors hover:bg-black"
+                    >Read more articles</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <img
+            src="./assets/images/logo.png"
+            class="footer__logo-mobile"
+            alt=""
+          />
+
+          <div class="footer__top">
+            <nav class="footer__nav">
+              <a href="./about.html">About NAS</a>
+              <a href="./services.html">Services</a>
+              <a href="./support.html">Get support</a>
+              <a href="./blog.html">Blog</a>
+            </nav>
+
+            <address>
+              <a href="mailto:hello@Nasolutions.com">Hello@Nasolutions.com</a>
+              <a href="mailto:hello@Nasolutions.uk">Hello@Nasolutions.uk</a>
+            </address>
+          </div>
+
+          <div class="footer__middle">
+            <div class="footer__loaction">
+              <h3>Location</h3>
+
+              <div class="flex gap-8">
+                <div class="flex-1">
+                  <h4>Egypt</h4>
+                  <p>
+                    Flat 620 - Bulding 23 Street 9 - New Maadi street, Cairo
+                  </p>
+                </div>
+                <div class="flex-1">
+                  <h4>United Emirates</h4>
+                  <p>
+                    233 We work space, The office 4, World trade center, Dubai,
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <nav class="footer__policy">
+              <a href="#">Privecy policy</a>
+              <a href="#">License</a>
+            </nav>
+          </div>
+
+          <div class="footer__bottom">
+            <img
+              src="./assets/images/logo.png"
+              class="footer__logo-desktop"
+              alt=""
+            />
+
+            <ul class="footer__social">
+              <li>
+                <a href="#">
+                  <img src="./assets/images/icons/facebook.svg" alt="" />
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/images/icons/twitter.svg" alt="" />
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/images/icons/youtube.svg" alt="" />
+                  Youtube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="copyright">©2023 sln All Rights are reserved️</p>
+      </footer>
+    </div>
+
+    <!-- js -->
+    <script defer src="./assets/scripts/pages/index.js"></script>
+  </body>
+</html>

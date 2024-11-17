@@ -1,0 +1,30 @@
+.blogs {
+  @apply grid gap-6 lg:grid-cols-3;
+}
+
+.article {
+  @apply block rounded-lg p-4 transition duration-300 hover:bg-white hover:shadow-xl;
+}
+
+.article__thumbnail {
+  @apply mb-6 max-h-[300px] w-full rounded-lg object-cover object-center;
+}
+
+.article__content {
+  @apply flex items-start gap-4;
+}
+
+.article__content h3 {
+  @apply mb-2 font-syne text-2xl font-medium transition duration-1000 group-hover:underline;
+}
+.article__content p {
+  @apply text-balance text-black text-opacity-60;
+}
+
+.article__arrow {
+  @apply inline-flex size-14 shrink-0 -rotate-45 items-center justify-center rounded-full bg-black transition duration-300 group-hover:bg-green;
+}
+
+.article__arrow svg {
+  @apply size-4 text-white transition-colors duration-300 group-hover:text-black;
+}

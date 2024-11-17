@@ -1,0 +1,25 @@
+.breadcrumb {
+  @apply mb-6 flex items-center gap-1.5 whitespace-nowrap font-syne lg:mb-10;
+}
+
+.breadcrumb li,
+.breadcrumb a {
+  @apply inline-flex items-center gap-1.5 truncate text-sm focus:text-primary focus:outline-none lg:text-lg;
+}
+
+.hero-single .breadcrumb li,
+.hero-single .breadcrumb a {
+  @apply text-white;
+}
+
+.breadcrumb a {
+  @apply transition-colors hover:text-opacity-65;
+}
+
+.breadcrumb svg {
+  @apply size-4 shrink-0 overflow-visible text-black;
+}
+
+.hero-single .breadcrumb svg {
+  @apply text-white;
+}

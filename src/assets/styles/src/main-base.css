@@ -1,0 +1,54 @@
+@import "./fonts.css";
+@import "tailwindcss/base";
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  @apply overflow-x-hidden bg-gray-50 font-inter font-normal;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sharp-grotesk font-semibold leading-none;
+}
+
+.main {
+  @apply overflow-hidden;
+}
+
+@screen lg {
+  * {
+    cursor: none !important;
+  }
+  .custom-cursor {
+    @apply pointer-events-none fixed z-[100] size-10 bg-contain bg-no-repeat drop-shadow-lg;
+    background-image: url('data:image/svg+xml,<svg width="67" height="68" viewBox="0 0 67 68" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M64.958 25.8227C68.3425 23.3407 67.3397 18.0258 63.2782 16.9477L36.6783 9.82767L0 0L9.82767 36.6783L16.9477 63.2782C18.0258 67.3397 23.3407 68.3425 25.8227 64.958L37.631 48.9128L55.732 67.0137L66.9887 55.7571L48.8877 37.6561L64.958 25.8227Z" fill="white"/></svg>');
+  }
+}

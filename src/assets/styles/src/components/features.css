@@ -1,0 +1,38 @@
+.features-list {
+  @apply space-y-32 lg:space-y-44;
+}
+
+.feature {
+  @apply grid  justify-items-center gap-12 lg:grid-cols-2 lg:gap-20;
+}
+
+.feature__content {
+  @apply max-lg:order-2;
+}
+
+.feature__subtitle {
+  @apply mb-6 font-normal text-gray-400 lg:text-xl;
+}
+
+.feature__title {
+  @apply mb-6 text-balance text-4xl font-medium lg:mb-12 lg:text-5xl lg:leading-tight;
+}
+
+.feature__description {
+  @apply space-y-8 text-lg;
+}
+
+.feature__description > p {
+  @apply text-balance lg:text-lg lg:leading-loose;
+}
+
+.feature__img-wrapper {
+  @apply relative max-lg:order-1 max-lg:ms-10;
+}
+
+.feature__img {
+  @apply aspect-square w-full rounded-3xl object-cover object-center;
+  max-width: 542px;
+  max-height: 516px;
+  border-radius: 21px 21px 21px 100px;
+}

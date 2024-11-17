@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAS</title>
+
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/combine/npm/gsap@3.12.5,npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/preline@2.1.0/dist/preline.min.js"
+    ></script>
+    <script defer src="./assets/scripts/main.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="navbar">
+        <div class="navbar__inner container">
+          <div class="flex items-center">
+            <button
+              class="navbar__menu-btn"
+              data-hs-overlay="#mobile-navbar"
+              aria-controls="mobile-navbar"
+            >
+              <span class="sr-only">Toggle Navigation</span>
+              <svg>
+                <use href="./assets/images/sprite.svg#menu"></use>
+              </svg>
+            </button>
+
+            <img
+              src="./assets/images/logo.png"
+              class="navbar__logo"
+              alt="nas logo"
+            />
+          </div>
+
+          <nav class="navbar__nav">
+            <ul>
+              <li class="dropdown">
+                <a href="./about.html" class="navbar__link">
+                  About NAS
+
+                  <!-- <svg>
+                    <use href="./assets/images/sprite.svg#chevron-down"></use>
+                  </svg> -->
+                </a>
+
+                <!-- <div
+                  class="hs-dropdown-menu hidden z-30 hs-dropdown-open:block bg-white rounded-lg shadow-xl p-4 space-y-3 min-w-64 hs-dropdown-open:opacity-100 [--trigger:hover]"
+                >
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                  <a href="#" class="block text-black">Link 1</a>
+                </div> -->
+              </li>
+
+              <li class="overlay hs-overlay">
+                <button
+                  type="button"
+                  class="navbar__link"
+                  href="./about.html"
+                  data-hs-overlay="#services-menu"
+                  aria-controls="services-menu"
+                  aria-pressed="false"
+                >
+                  Services
+
+                  <svg>
+                    <use href="./assets/images/sprite.svg#chevron-down"></use>
+                  </svg>
+                </button>
+
+                <div
+                  id="services-menu"
+                  class="sub-menu absolute inset-x-0 top-full z-30 hidden w-full translate-y-7 bg-black px-24 py-12 opacity-0 transition-all hs-overlay-open:translate-y-0 hs-overlay-open:opacity-100 hs-overlay-backdrop-open:bg-black/25"
+                >
+                  <div class="mx-auto max-w-[1400px]">
+                    <div class="grid grid-cols-3 divide-x divide-gray-900">
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-lavender">
+                          <use
+                            href="./assets/images/sprite.svg#service-1"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-lavender"
+                        >
+                          Solutions Services
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-lavender hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-green">
+                          <use
+                            href="./assets/images/sprite.svg#service-2"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-green"
+                        >
+                          Digital Services
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-green hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-6 size-10 text-pink">
+                          <use
+                            href="./assets/images/sprite.svg#service-3"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-pink"
+                        >
+                          Training
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-pink hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <hr class="my-16 border-gray-900" />
+
+                    <div class="grid grid-cols-3 divide-x divide-gray-900">
+                      <div class="px-24 first:ps-0 last:pe-0">
+                        <svg class="mb-4 size-10 text-gray-600">
+                          <use
+                            href="./assets/images/sprite.svg#service-3"
+                          ></use>
+                        </svg>
+
+                        <p
+                          class="mb-8 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                        >
+                          Other solutions
+                        </p>
+
+                        <ul class="space-y-6">
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Solutions Development</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Outsourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="text-xl hover:text-gray-600 hover:underline"
+                              >Digital transformation</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="col-span-2 px-24 first:ps-0 last:pe-0">
+                        <p
+                          class="mb-10 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                        >
+                          Latest Articles
+                        </p>
+
+                        <div class="max-w-[650px] space-y-6">
+                          <a
+                            href="#"
+                            class="group flex items-start gap-6 rounded-lg transition-[padding,background-color] hover:bg-gray-800 hover:p-4"
+                          >
+                            <img
+                              src="./assets/images/preview-1.png"
+                              class="max-h-32 w-32 shrink-0 rounded-md object-cover object-center"
+                              alt=""
+                            />
+                            <div>
+                              <h4
+                                class="mb-5 font-syne text-lg font-medium group-hover:underline lg:text-2xl"
+                              >
+                                Travel Agency Website casestudy
+                              </h4>
+                              <p
+                                class="line-clamp-2 text-balance text-gray-400"
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Luctus cum purus bibendum risus
+                                nibh cursus integer.
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="./support.html" class="navbar__link">Get support</a>
+              </li>
+              <li>
+                <a
+                  href="./careers.html"
+                  aria-current="page"
+                  class="navbar__link"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="./blog.html" class="navbar__link">Blog spot</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="./contact.html" class="navbar__btn">Let’s talk!</a>
+        </div>
+      </div>
+
+      <div
+        data-lenis-prevent
+        id="mobile-navbar"
+        class="navbar__mobile hs-overlay hidden opacity-0 [--auto-close:lg] hs-overlay-open:block hs-overlay-open:opacity-100 hs-overlay-backdrop-open:bg-transparent"
+      >
+        <button
+          class="navbar__menu-btn mb-20"
+          data-hs-overlay="#mobile-navbar"
+          aria-controls="mobile-navbar"
+        >
+          <span class="sr-only">Toggle Navigation</span>
+          <svg>
+            <use href="./assets/images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+
+        <div class="space-y-12">
+          <div class="hs-accordion-group">
+            <div class="hs-accordion">
+              <button class="hs-accordion-toggle link">
+                About NAS
+                <svg class="hs-accordion-active:rotate-180">
+                  <use href="./assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              >
+                <div class="pt-12">
+                  <p>
+                    <em>This is the third item's accordion body.</em> It is
+                    hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hs-accordion">
+              <button class="hs-accordion-toggle link">
+                Services
+                <svg class="hs-accordion-active:rotate-180">
+                  <use href="./assets/images/sprite.svg#chevron-down"></use>
+                </svg>
+              </button>
+
+              <div class="hs-accordion-content hidden">
+                <div class="divide-y divide-gray-800 pt-12">
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-lavender">
+                      <use href="./assets/images/sprite.svg#service-1"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-lavender"
+                    >
+                      Solutions Services
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-pink">
+                      <use href="./assets/images/sprite.svg#service-2"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-pink"
+                    >
+                      Training
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="py-10 first:pt-0 last:pb-0">
+                    <svg class="mb-4 size-10 text-gray-600">
+                      <use href="./assets/images/sprite.svg#service-3"></use>
+                    </svg>
+
+                    <p
+                      class="mb-8 font-sharp-grotesk text-2xl font-bold text-gray-600"
+                    >
+                      Other solutions
+                    </p>
+
+                    <ul class="space-y-6">
+                      <li>
+                        <a href="#" class="text-xl">Solutions Development</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Outsourcing</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-xl">Digital transformation</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="link">Get support</a>
+          <a href="#" class="link">Blog spot</a>
+        </div>
+      </div>
+
+      <header class="hero-single min-h-0 bg-primary pt-28 lg:pt-40">
+        <div class="hero-single__content container">
+          <div class="">
+            <ol class="breadcrumb">
+              <li>
+                <a href="./index.html"> Home </a>
+
+                <svg>
+                  <use href="./assets/images/sprite.svg#chevron-right"></use>
+                </svg>
+              </li>
+              <li>
+                <a href="./index.html"> NAS Careers </a>
+
+                <svg>
+                  <use href="./assets/images/sprite.svg#chevron-right"></use>
+                </svg>
+              </li>
+              <li>
+                <a href="./index.html"> Available jobs </a>
+
+                <svg>
+                  <use href="./assets/images/sprite.svg#chevron-right"></use>
+                </svg>
+              </li>
+              <li aria-current="page">Product design</li>
+            </ol>
+
+            <h1>Senior Product designer</h1>
+
+            <div class="mt-10 flex items-center gap-6 text-white">
+              <div class="flex items-center gap-2">
+                <svg class="size-6 lg:size-8">
+                  <use href="./assets/images/sprite.svg#location"></use>
+                </svg>
+
+                <span>Egypt office</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="size-6 lg:size-8">
+                  <use href="./assets/images/sprite.svg#clock"></use>
+                </svg>
+
+                <span>Full Time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container py-24 lg:py-36">
+          <section class="mb-10 pb-10">
+            <div class="flex flex-col items-start gap-6 lg:flex-row lg:gap-14">
+              <div
+                class="w-full space-y-10 text-lg max-lg:order-2 lg:space-y-14 lg:text-xl lg:leading-relaxed"
+              >
+                <div>
+                  <h3 class="mb-6 text-3xl leading-tight lg:mb-10 lg:text-5xl">
+                    About the role
+                  </h3>
+                  <p class="">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="mb-6 text-3xl leading-tight lg:mb-10 lg:text-5xl">
+                    What you will need
+                  </h3>
+                  <ul class="list-disc space-y-6 ps-8">
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="mb-6 text-3xl leading-tight lg:mb-10 lg:text-5xl">
+                    Our values
+                  </h3>
+                  <ul class="list-disc space-y-6 ps-8">
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                    <li>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="w-full rounded-xl bg-gray-200 p-6 text-center max-lg:order-1 lg:max-w-[320px]"
+              >
+                <a
+                  href="#"
+                  class="mb-10 block w-full rounded-xl bg-primary py-5 font-syne text-lg font-semibold text-white transition-colors hover:bg-opacity-85"
+                  >Apply now</a
+                >
+
+                <p class="mb-4 text-xl text-gray-600">Share this job</p>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                  <button class="transition-opacity hover:opacity-65">
+                    <svg class="size-9 text-black">
+                      <use href="./assets/images/sprite.svg#discord"></use>
+                    </svg>
+                  </button>
+                  <button class="transition-opacity hover:opacity-65">
+                    <svg class="size-9 text-black">
+                      <use href="./assets/images/sprite.svg#facebook"></use>
+                    </svg>
+                  </button>
+                  <button class="transition-opacity hover:opacity-65">
+                    <svg class="size-9 text-black">
+                      <use href="./assets/images/sprite.svg#linkedin"></use>
+                    </svg>
+                  </button>
+                  <button class="transition-opacity hover:opacity-65">
+                    <svg class="size-9 text-black">
+                      <use href="./assets/images/sprite.svg#messenger"></use>
+                    </svg>
+                  </button>
+                  <button class="transition-opacity hover:opacity-65">
+                    <svg class="size-9 text-black">
+                      <use href="./assets/images/sprite.svg#telegram"></use>
+                    </svg>
+                  </button>
+                  <button class="transition-opacity hover:opacity-65">
+                    <svg class="size-9 text-black">
+                      <use href="./assets/images/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="border-t border-black pt-10">
+            <h2 class="section-title mb-10 lg:mb-12">More jobs</h2>
+
+            <ul class="job-list">
+              <li>
+                <a href="#" class="job">
+                  <div>
+                    <h3 class="job__title">Product design team lead</h3>
+                    <p class="job__location">Egypt Office</p>
+                    <p class="job__description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard..
+                    </p>
+                  </div>
+
+                  <span class="job__btn">Apply now</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="job">
+                  <div>
+                    <h3 class="job__title">Product design team lead</h3>
+                    <p class="job__location">Egypt Office</p>
+                    <p class="job__description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard..
+                    </p>
+                  </div>
+
+                  <span class="job__btn">Apply now</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="job">
+                  <div>
+                    <h3 class="job__title">Product design team lead</h3>
+                    <p class="job__location">Egypt Office</p>
+                    <p class="job__description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </div>
+
+                  <span class="job__btn">Apply now</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="job">
+                  <div>
+                    <h3 class="job__title">Product design team lead</h3>
+                    <p class="job__location">Egypt Office</p>
+                    <!-- <p class="job__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard..</p> -->
+                  </div>
+
+                  <span class="job__btn">Apply now</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="job">
+                  <div>
+                    <h3 class="job__title">Product design team lead</h3>
+                    <p class="job__location">Egypt Office</p>
+                    <p class="job__description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard..
+                    </p>
+                  </div>
+
+                  <span class="job__btn">Apply now</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="job">
+                  <div>
+                    <h3 class="job__title">Product design team lead</h3>
+                    <p class="job__location">Egypt Office</p>
+                    <!-- <p class="job__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard..</p> -->
+                  </div>
+
+                  <span class="job__btn">Apply now</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <img
+            src="./assets/images/logo.png"
+            class="footer__logo-mobile"
+            alt=""
+          />
+
+          <div class="footer__top">
+            <nav class="footer__nav">
+              <a href="./about.html">About NAS</a>
+              <a href="./services.html">Services</a>
+              <a href="./support.html">Get support</a>
+              <a href="./blog.html">Blog</a>
+            </nav>
+
+            <address>
+              <a href="mailto:hello@Nasolutions.com">Hello@Nasolutions.com</a>
+              <a href="mailto:hello@Nasolutions.uk">Hello@Nasolutions.uk</a>
+            </address>
+          </div>
+
+          <div class="footer__middle">
+            <div class="footer__loaction">
+              <h3>Location</h3>
+
+              <div class="flex gap-8">
+                <div class="flex-1">
+                  <h4>Egypt</h4>
+                  <p>
+                    Flat 620 - Bulding 23 Street 9 - New Maadi street, Cairo
+                  </p>
+                </div>
+                <div class="flex-1">
+                  <h4>United Emirates</h4>
+                  <p>
+                    233 We work space, The office 4, World trade center, Dubai,
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <nav class="footer__policy">
+              <a href="#">Privecy policy</a>
+              <a href="#">License</a>
+            </nav>
+          </div>
+
+          <div class="footer__bottom">
+            <img
+              src="./assets/images/logo.png"
+              class="footer__logo-desktop"
+              alt=""
+            />
+
+            <ul class="footer__social">
+              <li>
+                <a href="#">
+                  <img src="./assets/images/icons/facebook.svg" alt="" />
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/images/icons/twitter.svg" alt="" />
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/images/icons/youtube.svg" alt="" />
+                  Youtube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="copyright">©2023 sln All Rights are reserved️</p>
+      </footer>
+    </div>
+
+    <!-- js -->
+    <!-- <script defer src="./assets/scripts/pages/index.js"></script> -->
+  </body>
+</html>

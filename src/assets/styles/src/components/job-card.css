@@ -1,0 +1,60 @@
+.job-list {
+  @apply grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-8;
+}
+
+.job-list--full {
+  @apply divide-y divide-black;
+}
+
+.job-list .job {
+  @apply flex h-full flex-col items-start justify-between gap-6 rounded-xl border border-black p-6 text-black transition-colors hover:bg-black lg:p-8;
+}
+
+.job-list--full .job {
+  @apply block py-8 lg:py-10;
+}
+.job-list--full li:first-child .job {
+  @apply pt-0
+}
+.job-list--full li:last-child .job {
+  @apply pb-0
+}
+
+.job-list .job :where(.job__title, .job__location, .job__description) {
+  @apply transition-colors;
+}
+.job-list .job:hover :where(.job__title, .job__location, .job__description) {
+  @apply text-white;
+}
+
+.job__title {
+  @apply mb-2.5 text-2xl font-medium lg:text-4xl;
+}
+.job-list--full .job__title {
+  @apply lg:mb-4 lg:text-5xl;
+}
+.job-list--full .job:hover .job__title {
+  @apply underline
+}
+
+.job__location {
+  @apply mb-6 text-gray-400;
+}
+
+.job__description {
+  @apply line-clamp-3 text-sm lg:text-base;
+}
+.job-list--full .job__description {
+  @apply text-base lg:text-xl mb-6 lg:mb-8;
+}
+
+.job__btn {
+  @apply inline-block border border-black rounded-xl bg-black px-10 py-5 font-syne font-semibold text-white transition-colors;
+}
+.job-list .job:hover .job__btn {
+  @apply bg-white text-black;
+}
+
+.job-list--full .job:hover .job__btn {
+  @apply bg-transparent text-black;
+}

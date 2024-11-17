@@ -1,0 +1,39 @@
+.statistics-list {
+  @apply grid grid-flow-col gap-6;
+  grid-auto-columns: 295px;
+}
+
+.statistics {
+  @apply relative flex origin-center flex-col gap-6 justify-between rounded-3xl bg-white p-6 text-black transition-all delay-75 duration-300;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(40px);
+}
+.statistics:hover {
+  @apply z-20 scale-110 bg-primary text-white;
+}
+.statistics-list:hover .statistics:not(:hover) {
+  @apply z-10 scale-95;
+}
+
+/* black */
+.statistics.black {
+  @apply flex-row items-start bg-black text-white lg:flex-col;
+}
+
+.statistics h3 {
+  @apply mb-2 font-syne font-bold leading-none;
+  font-size: 100px;
+}
+
+.statistics p {
+  @apply text-balance font-syne font-normal leading-tight;
+  font-size: 26px;
+}
+
+.statistics svg {
+  @apply ms-auto;
+}
+.statistics.black svg {
+  @apply ms-0;
+}

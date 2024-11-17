@@ -1,0 +1,18 @@
+.hero-single {
+  @apply relative min-h-[350px] overflow-hidden lg:min-h-screen;
+}
+
+.hero-single__bg {
+  @apply absolute inset-0 z-0 size-full object-cover object-center;
+}
+
+.hero-single__content {
+  @apply relative z-10 flex flex-col justify-end py-10 lg:py-20;
+  min-height: inherit;
+}
+
+.hero-single__content h1,
+.hero-title {
+  @apply max-w-[760px] font-medium leading-tight text-white;
+  font-size: clamp(3.5rem, 2.3116rem + 5.0704vw, 6.875rem);
+}
